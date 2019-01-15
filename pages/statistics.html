@@ -1,0 +1,60 @@
+<div data-role="page">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left">
+        <a href="#" class="link" data-rel="back"><i class="material-icons">arrow_back</i></a>
+      </div>
+      <div class="title">Statistics</div>
+      <div class="right">
+        <button id="btn-freq" class="button">Freq</button>
+      </div>
+    </div>
+  </div>
+  <div class="ui-content" id="math">
+    <select data-native-menu="false" id="select" data-icon="false">
+      <option value="1">1-Variable</option>
+      <option value="2">y=a+bx</option>
+      <option value="3">y=a+bx+c^2</option>
+      <option value="4">y=a+b•ln(x)</option>
+      <option value="5">y=a•e^(bx)</option>
+      <option value="6">y=a•b^x</option>
+      <option value="7">y=a•x^b</option>
+      <option value="8">y=a+b/x</option>
+    </select>
+    <div class="card">
+      <label>X</label>
+      <input type="text" placeholder="4 5 2" id="xInput" data-clear-btn="true" />
+    </div>
+    <div id="y_area" class="card none">
+      <label>Y</label>
+      <input type="text" placeholder="2 2 3" id="yInput" data-clear-btn="true" />
+    </div>
+    <div id="freq_area" class="card none">
+      <label>Frequency</label>
+      <input type="text" placeholder="2 1 1" id="fInput" data-clear-btn="true" />
+    </div>
+    <button id="cal" class="katex">=</button>
+    <div class="card overflow" id="_output">
+      <span class="katex-display katex">&nbsp;</span>
+    </div>
+    <div id="distr">
+      <div class="card">
+        <label>NORM DISTRIBUTION</label>
+        <div align="center">
+          <canvas id="plotDistr" width="350" height="350"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <label>x</label>
+        <input type="text" id="xx" placeholder="2" value="2" data-clear-btn="true" />
+      </div>
+      <div class="card overflow">
+        <div id="distr_output"><span class="katex-display katex">&nbsp;</span></div>
+      </div>
+    </div>
+    <div class="card overflow" id="reg">
+      <div id="reg_output"></div>
+    </div>
+  </div>
+  <script src="../js/extra.js"></script>
+</div>

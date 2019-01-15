@@ -1,0 +1,140 @@
+<div data-role="page">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left">
+        <a href="#" class="link" data-rel="back">
+          <i class="material-icons">arrow_back</i>
+        </a>
+      </div>
+      <div class="title">Matrix</div>
+    </div>
+  </div>
+  <div class="ui-content">
+    <select data-native-menu="false" data-icon="false" id="select">
+      <option value="matA_area">Matrix A</option>
+      <option value="matB_area">Matrix B</option>
+      <option value="matC_area">Matrix C</option>
+      <option value="matD_area">Matrix D</option>
+      <option value="calculate">Calculate</option>
+    </select>
+    <div id="matA_area" class="content">
+      <div class="row">
+        <div class="col-50">
+          <label>Rows</label>
+          <select data-native-menu="false" data-icon="false" id="matA_rows">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="col-50">
+          <label>Columns</label>
+          <select data-native-menu="false" data-icon="false" id="matA_cols">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="card overflow" id="matA_input">
+        <input type="text" data-role="none" class="input" id="A00" />
+      </div>
+    </div>
+    <div id="matB_area" class="content hide">
+      <div class="row">
+        <div class="col-50">
+          <label>Rows</label>
+          <select data-native-menu="false" data-icon="false" id="matB_rows">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="col-50">
+          <label>Columns</label>
+          <select data-native-menu="false" data-icon="false" id="matB_cols">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="card overflow" id="matB_input">
+        <input type="text" data-role="none" class="input" id="B00" />
+      </div>
+    </div>
+    <div id="matC_area" class="content hide">
+      <div class="row">
+        <div class="col-50">
+          <label>Rows</label>
+          <select data-native-menu="false" data-icon="false" id="matC_rows">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="col-50">
+          <label>Columns</label>
+          <select data-native-menu="false" data-icon="false" id="matC_cols">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="card overflow" id="matC_input">
+        <input type="text" data-role="none" class="input" id="C00" />
+      </div>
+    </div>
+    <div id="matD_area" class="content hide">
+      <div class="row">
+        <div class="col-50">
+          <label>Rows</label>
+          <select data-native-menu="false" data-icon="false" id="matD_rows">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="col-50">
+          <label>Columns</label>
+          <select data-native-menu="false" data-icon="false" id="matD_cols">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="card overflow" id="matD_input">
+        <input type="text" data-role="none" class="input" id="D00" />
+      </div>
+    </div>
+    <div id="calculate" class="content hide">
+      <div class="card">
+        <label>Expression</label>
+        <input type="text" data-clear-btn="true" placeholder="matA*invert(matB)" id="input" />
+      </div>
+      <button class="katex" id="cal">=</button>
+      <div class="card overflow" id="output">
+        <span class="katex-display katex">0</span>
+      </div>
+    </div>
+  </div>
+  <script src="../js/matrix.js"></script>
+</div>
