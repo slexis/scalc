@@ -4,6 +4,7 @@ var Math2 = core.Math2;
 var MQ = MathQuill.getInterface(2);
 var field = MQ.MathField(input);
 var mb = false;
+var ors = '';
 
 function nCr(n, k) {
   return _.parse(Math2.factorial(n) / (Math2.factorial(k) * Math2.factorial(n - k)))
@@ -19,24 +20,28 @@ function __exp_(str) {
 
 function cacl(z) {
   let IV = field.text().replace(/\|([^;]*)\|/g, 'abs($1)');
-  let option = angle_select.value;
-  let res = nerdamer(option === 'D' ? IV.replace(/([^a])(cos|sin|tan|sec|csc|cot|cosh|sinh|tanh|sech|csch|coth)\(([^\)]*)\)/g, '$1$2((pi/180)*$3)').replace(/(acos|asin|atan|asec|acsc|acot|acosh|asinh|atanh|asech|acsch|acoth)/g, '(180/pi)*$1') : option === 'G' ? IV.replace(/([^a])(cos|sin|tan|sec|csc|cot|cosh|sinh|tanh|sech|csch|coth)\(([^\)]*)\)/g, '$1$2((pi/200)*$3)').replace(/(acos|asin|atan|asec|acsc|acot|acosh|asinh|atanh|asech|acsch|acoth)/g, '(200/pi)*$1') : IV).text();
-  if (!/[a-z]|!/.test(IV) && IV.includes('/')) {
-    MQ.StaticMath(mixed).latex(nerdamer(res).text('mixed'));
-    MQ.StaticMath(recurring).latex(nerdamer(res).text('recurring'));
-    MQ.StaticMath(fraction).latex(nerdamer(res).toTeX());
+  let res = nerdamer(angle_btn.textContent === 'DEG' ? IV.replace(/([^a])(cos|sin|tan)\(([^\)]*)\)/g, '$1$2((pi/180)*$3)').replace(/(acos|asin|atan)/g, '(180/pi)*$1') : IV).latex();
+  if (/sqrt|frac/.test(res[1]) && res[1] !== 'big') {
+    if (!/[a-z]|!/.test(IV) && /\/|`|\./.test(IV)) {
+      MQ.StaticMath(mixed).latex(nerdamer(res[0]).text('mixed'));
+      MQ.StaticMath(recurring).latex(nerdamer(res[0]).text('recurring'));
+    } else {
+      $('#mixed, #recurring').html('');
+    }
     mb = true;
+    MQ.StaticMath(fraction).latex(res[1]);
   } else {
     mb = false;
   }
   let fix = fix_input.value;
   if (fix !== '') {
-    res = nerdamer.round(res, fix).text('decimal');
+    res[0] = nerdamer.round(res[0], fix).text('decimal');
   }
-  if (!isNaN(res)) {
-    res = res.replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, '$&\\quad');
+  if (!isNaN(res[0])) {
+    ors = res[0];
+    res[0] = res[0].replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, '$&\\quad');
   }
-  MQ.StaticMath(output).latex(__exp_(res.replace(/\*/g, '')));
+  MQ.StaticMath(output).latex(__exp_(res[0].replace(/\*/g, '')));
 }
 
 nerdamer.register([{
@@ -75,33 +80,35 @@ $(window).click(function(e) {
 })
 
 $('button').click(function() {
-  let meta = $('#func').is(':hidden') ? $(this).find('.cmd').text() : '\\' + $(this).text();
-  switch (meta) {
-    case '←':
-      field.keystroke('Left');
-      break;
-    case '→':
-      field.keystroke('Right');
-      break;
-    case '=':
-      cacl(meta);
-      break;
-    case 'AC':
-      field.latex('');
-      field.click();
-      $('#output').html('<span class="mq-math-mode"><span class="mq-root-block">0</span></span>')
-      break;
-    case 'DEL':
-      field.keystroke('Backspace');
-      break;
-    case '\\FACT':
-      let IV = field.text();
-      if (!isNaN(IV)) {
-        MQ.StaticMath(output).latex(nerdamer.pfactor(IV).toTeX().replace(/\\right\)\\left\(/g, '\\times').replace(/\\left\(|\\right\)/g, ''));
-      }
-      break;
-    default:
-      field.cmd(meta);
-      field.click();
+  let t = $(this).text();
+  if (t === 'DEG' || t === 'RAD') {
+    $(this).text(t === 'DEG' ? 'RAD' : 'DEG');
+  } else {
+    let meta = $('#func').is(':hidden') ? $(this).find('.cmd').text() : '\\' + t;
+    switch (meta) {
+      case '←':
+        field.keystroke('Left');
+        break;
+      case '→':
+        field.keystroke('Right');
+        break;
+      case '=':
+        cacl(meta);
+        break;
+      case 'AC':
+        field.latex('');
+        field.click();
+        $('#output').html('<span class="mq-math-mode"><span class="mq-root-block">0</span></span>')
+        break;
+      case 'DEL':
+        field.keystroke('Backspace');
+        break;
+      case '\\FACT':
+        MQ.StaticMath(output).latex(nerdamer.pfactor(ors).toTeX().replace(/\\right\)\\left\(/g, '\\times').replace(/\\left\(|\\right\)/g, ''));
+        break;
+      default:
+        field.cmd(meta);
+        field.click();
+    }
   }
 });
