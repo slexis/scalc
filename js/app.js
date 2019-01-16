@@ -41,8 +41,3 @@ $('button').click(function() {
 $('#fix_input').on('input', function() {
   output.innerHTML = res.toFixed(parseInt($(this).val()))
 });
-
-const hgt = $(window).innerHeight() - $('.row').innerHeight();
-
-$('#input').css({'height': `${35 * hgt / 100}px`});
-$('#output').css({'height': `${25 * hgt / 100}px`});
