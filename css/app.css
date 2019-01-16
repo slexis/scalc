@@ -1,25 +1,16 @@
 body {
-  background-color: #282828;
-  color: #ffffff;
+  background-color: #bdbdbd;
   font-family: sans-serif;
-  height: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: #ffffff;
-  -webkit-tap-highlight-color: transparent
 }
 
 input {
   width: 100%;
   outline: none;
   border: none;
-  background-color: inherit;
-  color: #ffffff;
   font-size: 25px;
-  border-bottom: 1px solid orange;
-  margin-top: 30px;
+  background-color: inherit;
+  border-bottom: 1px solid #ff5722;
+  margin-top: 27px;
   text-align: center;
 }
 
@@ -32,12 +23,9 @@ input:focus {
 }
 
 button {
-  display: flex;
-  background-color: #303030;
-  color: #ffffff;
   width: 100%;
   border-radius: 2px;
-  height: 60px;
+  height: 55px;
   margin: 0;
   padding: 0 10px;
   border: none;
@@ -52,8 +40,7 @@ button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 button:after {
@@ -90,6 +77,10 @@ button:active {
   -webkit-tap-highlight-color: transparent;
 }
 
+.col-100 {
+  width: calc(100% - 4px)
+}
+
 .col-20 {
   width: calc(20% - 4px)
 }
@@ -107,6 +98,7 @@ button:active {
 }
 
 .card {
+  position: relative;
   border-radius: 2px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
@@ -114,24 +106,39 @@ button:active {
   padding: 16px;
   margin: 8px 0;
   background-color: #303030;
+  color: #ffffff;
 }
 
 #input {
   height: 70px;
-  padding: 8px 0 0 0;
   overflow: auto;
   font-size: 25px;
+  text-align: left;
 }
 
 #output {
   font-size: 25px;
+  text-align: right;
 }
 
-[class*=col-] .mq-math-mode {
+button .mq-math-mode {
   font-size: 30px;
   cursor: pointer;
 }
 
-.rev, .func {
+#angle_btn, .rev, .func {
   font-size: 23px;
+  color: #ffffff;
+}
+
+.func {
+  background-color: #303030;
+}
+
+.rev {
+  background-color: #673ab7
+}
+
+#angle_btn {
+  background-color: #3f51b5
 }
