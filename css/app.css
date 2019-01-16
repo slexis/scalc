@@ -15,12 +15,7 @@ input {
   outline: none;
 }
 
-select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
-
-select, button {
+button {
   text-align: center;
   background-color: #303030;
   color: #ffffff;
@@ -45,12 +40,12 @@ select, button {
   cursor: pointer;
 }
 
-select:after, button:after {
+button:after {
   -webkit-transform-origin: 50% 100%;
   transform-origin: 50% 100%
 }
 
-select:active, button:active {
+button:active {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23)
 }
@@ -130,7 +125,7 @@ select:active, button:active {
   margin-top: 0
 }
 
-.row button, .row select {
+.row button {
   margin-top: 8px
 }
 
@@ -145,21 +140,8 @@ select:active, button:active {
   background-color: #303030;
 }
 
-#tabs .col-50 {
-  text-align: center;
-  font-size: 18px;
-  cursor: pointer;
-  padding: 8px 0;
-  margin-top: 8px;
-}
-
-.active-tab {
-  background-color: orange;
-}
-
 #input {
-  height: 50px;
-  max-height: 80px;
+  height: 80px;
   padding: 8px 0 0 0;
   overflow: auto;
   font-size: 20px;
@@ -176,23 +158,4 @@ select:active, button:active {
 
 .cmd {
   display: none;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  overflow: auto;
-  top: 0;
-  left: 0;
-  padding-top: 50px;
-}
-
-.modal-content {
-  padding: 8px;
-  margin: 15% auto;
-  background-color: rgb(48, 48, 48);
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 44px;
-  width: 80%;
 }
