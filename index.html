@@ -19,14 +19,14 @@
     <span class="mq-math-mode"><span class="mq-root-block" id="output">0</span>
   </div>
   <div class="row">
-    <div class="col-20"><button id="angle_btn">RAD</button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">←</span><span class="mq-root-block">←</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">→</span><span class="mq-root-block">→</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">\sqrt</span><span class="mq-root-block"><span class="mq-non-leaf"><span class="mq-scaled mq-sqrt-prefix">√</span><span class="mq-non-leaf mq-sqrt-stem"><span class="sqsm">⬜</span></span></span></span></span></button></div>
+    <div class="col-20"><button id="angle_btn" class="rev">RAD</button></div>
+    <div class="col-20"><button><span class="mq-math-mode">←</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">→</span></button></div>
+    <div class="col-20"><button class="func">sqrt</button></div>
     <div class="col-20"><input type="number" placeholder="Fix" id="fix_input" /></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">(</span><span class="mq-root-block"><span class="mq-non-leaf" ><span class="mq-scaled mq-paren">(</span><span class="mq-non-leaf"><span class="sqsm">⬜</span></span><span class="mq-scaled mq-paren">)</span></span></span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">|</span><span class="mq-root-block"><span class="mq-non-leaf" ><span class="mq-scaled mq-paren">|</span><span class="mq-non-leaf"><span class="sqsm">⬜</span></span><span class="mq-scaled mq-paren">|</span></span></span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">^</span><span class="mq-root-block"><span class="sqsm">⬜</span><span class="mq-supsub mq-non-leaf mq-sup-only"><span class="mq-sup"><span class="sqsm">⬜</span></span></span></span></span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">(</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">|</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">^</span></button></div>
     <div class="col-20"><button class="func">ln</button></div>
     <div class="col-20"><button class="func">log</button></div>
     <div class="col-20"><button class="func">sin</button></div>
@@ -34,28 +34,27 @@
     <div class="col-20"><button class="func">tan</button></div>
     <div class="col-20"><button class="func">asin</button></div>
     <div class="col-20"><button class="func">acos</button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">7</span><span class="mq-root-block">7</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">8</span><span class="mq-root-block">8</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">9</span><span class="mq-root-block">9</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">DEL</span><span class="mq-root-block">DEL</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">AC</span><span class="mq-root-block">AC</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">4</span><span class="mq-root-block">4</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">5</span><span class="mq-root-block">5</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">6</span><span class="mq-root-block">6</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">×</span><span class="mq-root-block">×</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">/</span><span class="mq-root-block"><span class="mq-fraction mq-non-leaf"><span class="mq-numerator"><span class="sqsm">⬜</span></span><span class="mq-denominator"><span class="sqsm">⬜</span></span><span class="mq-un">​</span></span></span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">1</span><span class="mq-root-block">1</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">2</span><span class="mq-root-block">2</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">3</span><span class="mq-root-block">3</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">+</span><span class="mq-root-block">+</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">-</span><span class="mq-root-block">−</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">0</span><span class="mq-root-block">0</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">.</span><span class="mq-root-block">.</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">%</span><span class="mq-root-block">%</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">e</span><span class="mq-root-block">e</span></span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode"><span class="cmd">π</span><span class="mq-root-block">π</span></span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">7</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">8</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">9</span></button></div>
+    <div class="col-20"><button class="rev">DEL</button></div>
+    <div class="col-20"><button class="rev">AC</button></div>
+    <div class="col-20"><button><span class="mq-math-mode">4</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">5</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">6</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">×</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">/</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">1</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">2</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">3</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">+</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">−</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">0</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">.</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">%</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">e</span></button></div>
+    <div class="col-20"><button><span class="mq-math-mode">π</span></button></div>
   </div>
-  <footer>v1.0.0. Developed by Sinh Truong</footer>
   <script src="cordova.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/mathquill.js"></script>

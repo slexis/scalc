@@ -11,16 +11,32 @@ a {
 }
 
 input {
+  width: 100%;
   outline: none;
+  border: none;
+  background-color: inherit;
+  color: #ffffff;
+  font-size: 25px;
+  border-bottom: 1px solid orange;
+  margin-top: 35px;
+  text-align: center;
+}
+
+input:focus {
+  border-width: 2px;
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
 }
 
 button {
+  display: flex;
   background-color: #303030;
   color: #ffffff;
   width: 100%;
   border-radius: 2px;
-  height: 40px;
-  font-size: 16px;
+  height: 60px;
   margin: 0;
   padding: 0 10px;
   border: none;
@@ -35,6 +51,8 @@ button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 
 button:after {
@@ -45,20 +63,6 @@ button:after {
 button:active {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23)
-}
-
-footer {
-  font-size: 15px;
-  text-align: center;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-.overflow {
-  overflow: auto;
-  white-space: nowrap
 }
 
 .row {
@@ -83,24 +87,6 @@ footer {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-}
-
-[class*=col-] .mq-math-mode {
-  font-size: 20px;
-}
-
-[class*=col-] input {
-  width: 100%;
-  border: none;
-  background-color: inherit;
-  color: #ffffff;
-  font-size: 18px;
-  border-bottom: 1px solid orange;
-  margin-top: 20px;
-}
-
-[class*=col-] input:focus {
-  border-width: 2px;
 }
 
 .col-20 {
@@ -137,15 +123,15 @@ footer {
   font-size: 25px;
 }
 
-.row .mq-root-block, #output {
+#output {
+  font-size: 25px;
+}
+
+[class*=col-] .mq-math-mode {
+  font-size: 30px;
   cursor: pointer;
 }
 
-.mq-un {
-  width: 0;
-  display: inline-block;
-}
-
-.cmd {
-  display: none;
+.rev, .func {
+  font-size: 23px;
 }

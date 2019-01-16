@@ -14,7 +14,7 @@ $('button').click(function() {
     $(this).text(t === 'DEG' ? 'RAD' : 'DEG');
     calc();
   } else {
-    let meta = $(this).hasClass('func') ? '\\' + t : $(this).find('.cmd').text();
+    let meta = $(this).hasClass('func') ? '\\' + t : t;
     switch (meta) {
       case '←':
         field.keystroke('Left');
