@@ -1,7 +1,6 @@
 body {
   background-color: #282828;
   color: #ffffff;
-  font-size: 20px;
   font-family: sans-serif;
 }
 
@@ -16,12 +15,10 @@ input {
 }
 
 button {
-  text-align: center;
   background-color: #303030;
   color: #ffffff;
   width: 100%;
   border-radius: 2px;
-  line-height: 40px;
   height: 40px;
   font-size: 16px;
   margin: 0;
@@ -48,6 +45,15 @@ button:after {
 button:active {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23)
+}
+
+footer {
+  font-size: 15px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .overflow {
@@ -97,22 +103,6 @@ button:active {
   border-width: 2px;
 }
 
-.col-50 {
-  width: calc(50% - 4px)
-}
-
-.col-40 {
-  width: calc(40% - 4px)
-}
-
-.col-30 {
-  width: calc(30% - 4px)
-}
-
-.col-25 {
-  width: calc(25% - 4px)
-}
-
 .col-20 {
   width: calc(20% - 4px)
 }
@@ -144,7 +134,7 @@ button:active {
   height: 80px;
   padding: 8px 0 0 0;
   overflow: auto;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .row .mq-root-block, #output {
