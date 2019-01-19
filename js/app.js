@@ -2,7 +2,7 @@ var field = MathQuill.getInterface(2).MathField(input);
 var res;
 
 function calc() {
-  let IV = field.text().replace(/\|([^;]*)\|/g, 'abs($1)').replace(/log/g, 'log10').replace(/ln/g, 'log').replace('−', '-');
+  let IV = field.text().replace(/\|([^;]*)\|/g, 'abs($1)').replace(/log/g, 'log10').replace(/ln/g, 'log');
   res = math.eval(angle_btn.textContent === 'DEG' ? IV.replace(/([^a])(cos|sin|tan)\(([^\)]*)\)/g, '$1$2((pi/180)*$3)').replace(/(acos|asin|atan)/g, '(180/pi)*$1') : IV);
   let fix = fix_input.value;
   output.innerHTML = (fix !== '' ? res.toFixed(parseInt(fix)) : res.toString().replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, '$& ')).replace('-', '−');
@@ -39,5 +39,5 @@ $('button').click(function() {
 });
 
 $('#fix_input').on('input', function() {
-  output.innerHTML = res.toFixed(parseInt($(this).val()))
+  output.innerHTML = res.toFixed(parseInt($(this).val())).replace('-', '−')
 });

@@ -19,6 +19,7 @@
   <preference name="android-minSdkVersion" value="19" />
   <preference name="android-targetSdkVersion" value="26" />
   <preference name="android-installLocation" value="auto" />
+  <preference name="orientation" value="portrait" />
   <preference name="StatusBarOverlaysWebView" value="false" />
   <plugin name="cordova-plugin-statusbar" source="npm" />
   <platform name="android">
