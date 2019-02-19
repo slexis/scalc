@@ -3,26 +3,6 @@ body {
   font-family: sans-serif;
 }
 
-input {
-  width: 100%;
-  outline: none;
-  border: none;
-  font-size: 25px;
-  background-color: inherit;
-  border-bottom: 1px solid #ff5722;
-  text-align: center;
-  position: relative;
-  top: 45%;
-}
-
-input:focus {
-  border-width: 2px;
-}
-
-::-webkit-input-placeholder {
-  text-align: center;
-}
-
 button {
   border-radius: 2px;
   border: none;
@@ -82,8 +62,19 @@ button:active {
 }
 
 button .mq-math-mode {
-  font-size: 30px;
   cursor: pointer;
+}
+
+button:not(.sym) .mq-math-mode {
+  font-size: 30px;
+}
+
+.sym {
+  font-size: 20px;
+}
+
+.sym > .text {
+  display: none;
 }
 
 #angle_btn, .rev, .func {
