@@ -10,8 +10,9 @@ input {
   font-size: 25px;
   background-color: inherit;
   border-bottom: 1px solid #ff5722;
-  margin-top: 27px;
   text-align: center;
+  position: relative;
+  top: 45%;
 }
 
 input:focus {
@@ -23,11 +24,7 @@ input:focus {
 }
 
 button {
-  width: 100%;
   border-radius: 2px;
-  height: 55px;
-  margin: 0;
-  padding: 0 10px;
   border: none;
   -webkit-transition-duration: .3s;
   transition-duration: .3s;
@@ -53,64 +50,27 @@ button:active {
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23)
 }
 
-.row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start
+.content {
+  display: grid;
+  grid-gap: 8px;
+  grid-template: auto / 1fr 1fr 1fr 1fr 1fr;
+  height: 97vh;
 }
 
-[class*=col-] {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.col-100 {
-  width: calc(100% - 4px)
-}
-
-.col-20 {
-  width: calc(20% - 4px)
-}
-
-.card + .row {
-  margin-top: -8px
-}
-
-.row + .card {
-  margin-top: 0
-}
-
-.row button {
-  margin-top: 8px
-}
-
-.card {
+.display {
   position: relative;
+  grid-column: 1 / 6;
   border-radius: 2px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
   -webkit-tap-highlight-color: transparent;
-  padding: 16px;
-  margin: 8px 0;
+  padding: 16px 16px 0 16px;
   background-color: #303030;
   color: #ffffff;
 }
 
 #input {
-  height: 70px;
+  height: 100px;
   overflow: auto;
   font-size: 25px;
   text-align: left;
@@ -140,5 +100,5 @@ button .mq-math-mode {
 }
 
 #angle_btn {
-  background-color: #3f51b5
+  background-color: #3f51b5;
 }

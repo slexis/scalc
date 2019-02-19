@@ -14,46 +14,48 @@
 </head>
 
 <body>
-  <div class="card">
-    <div id="input"></div>
-    <span class="mq-math-mode"><span class="mq-root-block" id="output">0</span>
-  </div>
-  <div class="row">
-    <div class="col-20"><button id="angle_btn">RAD</button></div>
-    <div class="col-20"><button><span class="mq-math-mode">←</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">→</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">(</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">|</span></button></div>
-    <div class="col-20"><input type="number" placeholder="Fix" id="fix_input" /></div>
-    <div class="col-20"><button class="func">sqrt</button></div>
-    <div class="col-20"><button class="func">ln</button></div>
-    <div class="col-20"><button class="func">log</button></div>
-    <div class="col-20"><button class="func">sin</button></div>
-    <div class="col-20"><button class="func">cos</button></div>
-    <div class="col-20"><button class="func">tan</button></div>
-    <div class="col-20"><button class="func">asin</button></div>
-    <div class="col-20"><button class="func">acos</button></div>
-    <div class="col-20"><button class="func">atan</button></div>
-    <div class="col-20"><button><span class="mq-math-mode">7</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">8</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">9</span></button></div>
-    <div class="col-20"><button class="rev">DEL</button></div>
-    <div class="col-20"><button class="rev">AC</button></div>
-    <div class="col-20"><button><span class="mq-math-mode">4</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">5</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">6</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">×</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">/</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">1</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">2</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">3</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">+</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">−</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">0</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">.</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">^</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">e</span></button></div>
-    <div class="col-20"><button><span class="mq-math-mode">π</span></button></div>
+  <div class="content">
+    <div class="display">
+      <div id="input"></div>
+      <span class="mq-math-mode"><span class="mq-root-block" id="output">0</span></span>
+    </div>
+    <button id="angle_btn">RAD</button>
+    <button><span class="mq-math-mode">←</span></button>
+    <button><span class="mq-math-mode">→</span></button>
+    <button><span class="mq-math-mode">(</span></button>
+    <button><span class="mq-math-mode">|</span></button>
+    <div class="fix">
+      <input type="number" placeholder="Fix" id="fix_input" />
+    </div>
+    <button class="func">sqrt</button>
+    <button class="func">ln</button>
+    <button class="func">log</button>
+    <button class="func">sin</button>
+    <button class="func">cos</button>
+    <button class="func">tan</button>
+    <button class="func">asin</button>
+    <button class="func">acos</button>
+    <button class="func">atan</button>
+    <button><span class="mq-math-mode">7</span></button>
+    <button><span class="mq-math-mode">8</span></button>
+    <button><span class="mq-math-mode">9</span></button>
+    <button class="rev">DEL</button>
+    <button class="rev">AC</button>
+    <button><span class="mq-math-mode">4</span></button>
+    <button><span class="mq-math-mode">5</span></button>
+    <button><span class="mq-math-mode">6</span></button>
+    <button><span class="mq-math-mode">×</span></button>
+    <button><span class="mq-math-mode">/</span></button>
+    <button><span class="mq-math-mode">1</span></button>
+    <button><span class="mq-math-mode">2</span></button>
+    <button><span class="mq-math-mode">3</span></button>
+    <button><span class="mq-math-mode">+</span></button>
+    <button><span class="mq-math-mode">−</span></button>
+    <button><span class="mq-math-mode">0</span></button>
+    <button><span class="mq-math-mode">.</span></button>
+    <button><span class="mq-math-mode">^</span></button>
+    <button><span class="mq-math-mode">e</span></button>
+    <button><span class="mq-math-mode">π</span></button>
   </div>
   <script src="cordova.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
